@@ -409,15 +409,15 @@
               </div>
             </div><!-- End Portfolio Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <img src="./images/sorbetblackman.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
                 <h4>Sorbet Men</h4>
-                <p>Photos from an Sorbet Man event.</p>
+                <p>Photos from an Sorbet Man event.</p> -->
                 <!-- <a href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg" title="App 2" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
-                <a href="portfolio-details4.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <!-- <a href="portfolio-details4.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div> -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
               <img src="./images/sensodyne.jpg" class="img-fluid" alt="">
@@ -440,12 +440,32 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <img src="" class="img-fluid" alt="">
+              <img src="/images/oldmutual3.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <!-- <p>Lorem ipsum, dolor sit</p> -->
+                <h4>Old Mutual Cycling</h4>
+                <p>Old Mutual Cycling Event</p> 
                 <!-- <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
-                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                <a href="portfolio-details8.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="/images/kinkingWithKinJayde/kimLogo.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Kickin it with Kim Jayde</h4>
+                <p>Kickin it with Kim Jayde event</p>
+                <!-- <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                <a href="portfolio-details9.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <img src="/images/JhbComedy.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Joburg Comedy Experience</h4>
+                <p>Pictures from theJoburg Comedy Experience </p> 
+                <!-- <a href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg" title="App 3" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                <a href="portfolio-details7.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
               </div>
             </div><!-- End Portfolio Item -->
 
@@ -508,8 +528,11 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <div id="contact-form">
+               <form id="" action="https://api.web3forms.com/submit" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
               <div class="row gy-4">
+
+                <input type="hidden" name="access_key" value="88b3c221-25af-476e-939d-96e4c13bb277">
 
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
@@ -527,10 +550,14 @@
                   <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
                 </div>
 
-                <div class="col-md-12 text-center">
+                <!-- <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> -->
+
+                  
+                    <input type="hidden" name="redirect" value="https://devtechinnovations.co.za/">
+                    <div class="h-captcha" data-captcha="true"></div>
 
                   <button type="submit">Send Message</button>
                 </div>
@@ -538,6 +565,27 @@
               </div>
             </form>
           </div><!-- End Contact Form -->
+
+              <!-- Scripts for SweetAlert and Navigation -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    // Add an event listener to the form submission
+    document.getElementById("contact-form").addEventListener("submit", function (event) {
+        // Prevent the default form submission
+        event.preventDefault();
+        // Trigger Swal.fire after form submission
+        Swal.fire({
+            title: "Success",
+            text: "Message sent successfully",
+            icon: "success"
+        }).then(() => {
+            // After the user acknowledges the Swal.fire message, submit the form
+            event.target.submit()
+        });
+    });
+</script>
+
 
         </div>
 
