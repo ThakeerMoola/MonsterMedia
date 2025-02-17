@@ -87,6 +87,14 @@ h6 {
   font-family: var(--heading-font);
 }
 
+#about {
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+#contact {
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
