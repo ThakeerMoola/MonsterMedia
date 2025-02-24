@@ -79,12 +79,12 @@
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
+  /*const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
       preloader.remove();
     });
-  }
+  }*/
 
   /**
    * Debounce function to limit the rate of function execution
